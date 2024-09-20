@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- La linea xml version= 1.0 encoding=utf-8 o especifica que el archivo está escrito
+en formato XML y la codificación utilizada es UTF-8
+(Este es tipo de codificacion para español).
+Es estándar para archivos XML y asegura la interpretación correcta de los caracteres.-->
+
+<!-- Este codigo es una parte crucial la aplicacion de Android.
+    Este archivo brinda información esencial sobre la aplicación al sistema Android,
+    como actividades, servicios, permisos y características de hardware necesarias.
+      -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,3 +37,34 @@
         </activity>
     </application>
 </manifest>
+
+<!--
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AhorraAguaApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".ArticulosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AhorraAguaApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
+-->
