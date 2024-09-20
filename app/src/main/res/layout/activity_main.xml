@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_water_drop" />
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/tipsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tips para el ahorro del agua" />
+
+    <Button
+        android:id="@+id/articlesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Articulos sobre el cuidado del agua" />
+
+    <Button
+        android:id="@+id/gameButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Juego" />
+</LinearLayout>
