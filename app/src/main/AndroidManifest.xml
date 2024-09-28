@@ -41,6 +41,17 @@ Es estándar para archivos XML y asegura la interpretación correcta de los cara
 <!--
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+- La etiqueta <manifest> es el elemento raíz del archivo. Contiene todos
+  los componentes de la aplicación.
+- El atributo xmlns:android define el espacio de nombres XML para los atributos
+  específicos de Android. Hace referencia a una URL de esquema proporcionada por
+  Android (http://schemas.android.com/apk/res/android).
+- El atributo xmlns:tools agrega soporte para usar el espacio de nombres de herramientas
+  de Android (http://schemas.android.com/tools), lo cual ayuda con configuraciones condicionales
+  y herramientas de desarrollo.
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
