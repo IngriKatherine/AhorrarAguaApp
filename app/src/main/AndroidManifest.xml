@@ -53,6 +53,8 @@ Es estándar para archivos XML y asegura la interpretación correcta de los cara
 
 
     <application
+    - La etiqueta <application> define toda la aplicación y su comportamiento.
+    Envuela todas las actividades, servicios y otros componentes.
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
