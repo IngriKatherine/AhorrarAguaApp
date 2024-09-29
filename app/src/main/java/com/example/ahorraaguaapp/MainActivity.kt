@@ -12,25 +12,17 @@ import androidx.compose.ui.viewinterop.AndroidView
 import com.example.ahorraaguaapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Inflate the layout using view binding
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // Set click listeners using view binding
         binding.tipsButton.setOnClickListener {
             startActivity(Intent(this, TipsActivity::class.java))
         }
-
         binding.articlesButton.setOnClickListener {
             startActivity(Intent(this, ArticulosActivity::class.java))
         }
-
         binding.gameButton.setOnClickListener {
             startActivity(Intent(this, JuegoActivity::class.java))
         }
@@ -39,15 +31,10 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun ActivityMainPreview(modifier: Modifier = Modifier) {
-    // Access the current context
     val context = LocalContext.current
-
-    // Use AndroidView to preview activity_main.xml layout in Compose
     AndroidView(
         factory = {
-            // Obtain the layout inflater from the context
             val layoutInflater = android.view.LayoutInflater.from(context)
-            // Inflate your layout using the view binding
             val binding = ActivityMainBinding.inflate(layoutInflater)
             binding.root
         },
@@ -55,7 +42,7 @@ fun ActivityMainPreview(modifier: Modifier = Modifier) {
     )
 }
 
-@Preview(showBackground = true, widthDp = 400, heightDp = 800) // Adjust the preview size here
+@Preview(showBackground = true, widthDp = 400, heightDp = 800)
 @Composable
 fun PreviewActivityMain() {
     ActivityMainPreview(modifier = Modifier)

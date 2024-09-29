@@ -9,6 +9,7 @@ import android.os.Looper
 import android.view.MotionEvent
 import android.view.View
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.viewinterop.AndroidView
@@ -91,12 +92,15 @@ class GameView(context: Context) : View(context) {
 
 // Composable function to preview GameView in Jetpack Compose
 @Composable
-fun GameViewPreview() {
+fun GameViewPreview(modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    AndroidView(factory = { GameView(context) })
+    AndroidView(
+        factory = { GameView(context) },
+        modifier = modifier
+    )
 }
 
-@Preview
+@Preview(showBackground = true, widthDp = 400, heightDp = 800)
 @Composable
 fun PreviewGameView() {
     GameViewPreview()
