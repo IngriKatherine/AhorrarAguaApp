@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules xmlns:android="http://schemas.android.com/apk/res/android">
+    <cloud-backup>
+        <!-- Specifies that everything defined in fullBackupContent should be backed up -->
+        <include domain="file" />
+        <include domain="database" />
+        <include domain="sharedpref" />
+        <include domain="external" />
+    </cloud-backup>
+
+    <device-transfer>
+        <!-- Specifies that everything defined in fullBackupContent should be transferred during device migration -->
+        <include domain="file" />
+        <include domain="database" />
+        <include domain="sharedpref" />
+        <include domain="external" />
+    </device-transfer>
+</data-extraction-rules>

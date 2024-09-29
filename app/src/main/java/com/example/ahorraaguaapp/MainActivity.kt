@@ -4,10 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.Composable
-import com.example.ahorraaguaapp.databinding.ActivityMainBinding
-import androidx.compose.material3.Text
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.viewinterop.AndroidView
+import com.example.ahorraaguaapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,15 +36,22 @@ class MainActivity : AppCompatActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun ActivityMainPreview() {
+    // Access the current context
+    val context = LocalContext.current
+
+    // Use AndroidView to preview activity_main.xml layout in Compose
+    AndroidView(factory = {
+        // Obtain the layout inflater from the context
+        val layoutInflater = android.view.LayoutInflater.from(context)
+        // Inflate your layout using the view binding
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        binding.root
+    })
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-        Greeting("Android")
+fun PreviewActivityMain() {
+    ActivityMainPreview()
 }
