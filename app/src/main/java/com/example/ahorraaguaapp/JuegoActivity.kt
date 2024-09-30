@@ -8,7 +8,7 @@ class JuegoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(GameView(this))
+        setContentView(JuegoView(this))
     }
 }
 
