@@ -1,19 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- La linea xml version= 1.0 encoding=utf-8 o especifica que el archivo está escrito
-en formato XML y la codificación utilizada es UTF-8
-(Este es tipo de codificacion para español).
-Es estándar para archivos XML y asegura la interpretación correcta de los caracteres.-->
-
-<!-- Este codigo es una parte crucial la aplicacion de Android.
-    Este archivo brinda información esencial sobre la aplicación al sistema Android,
-    como actividades, servicios, permisos y características de hardware necesarias.
-      -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AhorraAguaApp"
+        android:usesCleartextTraffic="false"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".ArticulosActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".TipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JuegoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AhorraAguaApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+
+>> La linea xml version= 1.0 encoding=utf-8 o especifica que el archivo está escrito
+en formato XML y la codificación utilizada es UTF-8 (Este es tipo de codificacion para español).
+Es estándar para archivos XML y asegura la interpretación correcta de los caracteres.
+
+>> Descripcion general: Este codigo es una parte crucial la aplicacion de Android.
+    Este archivo brinda información esencial sobre la aplicación al sistema Android,
+    como actividades, servicios, permisos y características de hardware necesarias.
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    >> El espacio de nombres tools, que se utiliza para proporcionar información adicional para herramientas de desarrollo.
+
+    <application
+        >> El elemento <application> define la aplicación y contiene varios atributos que configuran su comportamiento y apariencia:
+        android:allowBackup="true"
+        >> android:allowBackup="true": Permite que la aplicación realice copias de seguridad y restauraciones.
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -46,47 +88,4 @@ Es estándar para archivos XML y asegura la interpretación correcta de los cara
         </activity>
     </application>
 </manifest>
-
-<!--
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools">
-
-    - La etiqueta <manifest> es el elemento raíz del archivo. Contiene todos
-      los componentes de la aplicación.
-    - El atributo xmlns:android define el espacio de nombres XML para los atributos
-      específicos de Android. Hace referencia a una URL de esquema proporcionada por
-      Android (http://schemas.android.com/apk/res/android).
-    - El atributo xmlns:tools agrega soporte para usar el espacio de nombres de herramientas
-      de Android (http://schemas.android.com/tools), lo cual ayuda con configuraciones condicionales
-      y herramientas de desarrollo.
-
-
-        <application
-        - La etiqueta <application> define toda la aplicación y su comportamiento.
-        Envuela todas las actividades, servicios y otros componentes.
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:supportsRtl="true"
-            android:theme="@style/Theme.AhorraAguaApp"
-            tools:targetApi="31">
-            <activity
-                android:name=".ArticulosActivity"
-                android:exported="false" />
-            <activity
-                android:name=".TipsActivity"
-                android:exported="false" />
-            <activity
-                android:name=".MainActivity"
-                android:exported="true"
-                android:label="@string/app_name"
-                android:theme="@style/Theme.AhorraAguaApp">
-                <intent-filter>
-                    <action android:name="android.intent.action.MAIN" />
-                    <category android:name="android.intent.category.LAUNCHER" />
-                </intent-filter>
-            </activity>
-        </application>
-    </manifest>
     -->

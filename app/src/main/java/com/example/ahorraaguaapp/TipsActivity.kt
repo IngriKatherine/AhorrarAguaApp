@@ -16,6 +16,6 @@ class TipsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Access the TextView using view binding
-        binding.tipsTextView.text = "Here are some water-saving tips: \n1. Turn off the tap while brushing your teeth. \n2. Take shorter showers. \n3. Fix leaks promptly."
+        binding.tipsTextView.text = "@string/tips"
     }
 }
