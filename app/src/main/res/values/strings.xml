@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">AhorraAguaApp</string>
-    <string name="tips">Aca van algunos tips para ahorrar agua: \n1. Cierra la llave mientras te lavas los dientes. \n2. Toma duchas mas cortas. \n3. Arregla danos en tuberias de forma oportuna.</string>
+    <string name="tips">Aca van algunos tips para ahorrar agua: \n1. Cierra la llave mientras te lavas los dientes. \n2. Toma duchas mas cortas. \n3. Arregla danos en tuberias de forma oportuna. \n4 Un articulo mas... </string>
     <string name="articles">Aca van algunos articulos relacionados con el cuidado del agua y su relacion con el cambio climatico: \n1 El impacto del cambio climatico en el acceso a recursos de agua \n2 Como puedes reducir tu huella de carbono?.</string>
     <string name="articulo1titulo"> titulo>
     <string name="articulo1texto"> parrafo 1.\n1 parrafo2 ...>
