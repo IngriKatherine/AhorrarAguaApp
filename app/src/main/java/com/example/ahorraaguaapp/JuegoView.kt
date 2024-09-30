@@ -63,7 +63,7 @@ class JuegoView(context: Context) : View(context) {
     private var bordevaldeY = 0f
     private var gotaX = width / 2f
     private var gotaY = 0f
-    private var gotavelocidad = 2f
+    private var gotavelocidad = 6f
     private var racha = 0
     private var puntajealto = 0
     private var juegoterminado = false
