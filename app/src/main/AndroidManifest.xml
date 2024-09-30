@@ -26,6 +26,9 @@
             android:name=".JuegoActivity"
             android:exported="false" />
         <activity
+            android:name=".Habitos"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AhorraAguaApp">

@@ -7,31 +7,37 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
+    android:background="@drawable/oceano"
     tools:context=".MainActivity">
 
     <!-- Logo -->
-    <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_water_drop" />
+<ImageView
+android:id="@+id/logoImageView"
+android:layout_width="100dp"
+android:layout_height="100dp"
+android:src="@drawable/ic_launcher_water_drop" />
 
     <!-- Buttons -->
-    <Button
-        android:id="@+id/tipsButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tips para el ahorro del agua" />
+<Button
+android:id="@+id/BotonTips"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Tips para el ahorro del agua" />
 
-    <Button
-        android:id="@+id/articlesButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Articulos sobre el cuidado del agua" />
+<Button
+android:id="@+id/BotonArticulos"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Articulos sobre el cuidado del agua" />
 
-    <Button
-        android:id="@+id/gameButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Juego" />
-</LinearLayout>
+<Button
+android:id="@+id/BotonJuego"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Juego" />
+<Button
+android:id="@+id/BotonHabitos"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Habitos de ahorro del agua" />
+    </LinearLayout>

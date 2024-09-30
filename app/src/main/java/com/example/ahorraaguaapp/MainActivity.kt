@@ -7,7 +7,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import com.example.ahorraaguaapp.databinding.ActivityMainBinding
 
@@ -17,14 +16,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.tipsButton.setOnClickListener {
+        binding.BotonTips.setOnClickListener {
             startActivity(Intent(this, TipsActivity::class.java))
         }
-        binding.articlesButton.setOnClickListener {
+        binding.BotonArticulos.setOnClickListener {
             startActivity(Intent(this, ArticulosActivity::class.java))
         }
-        binding.gameButton.setOnClickListener {
+        binding.BotonJuego.setOnClickListener {
             startActivity(Intent(this, JuegoActivity::class.java))
+        }
+        binding.BotonHabitos.setOnClickListener {
+            startActivity(Intent(this, Habitos::class.java))
         }
     }
 }
