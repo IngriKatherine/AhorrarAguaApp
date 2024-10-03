@@ -14,8 +14,5 @@ class TipsActivity : AppCompatActivity() {
         // Inflate the layout using view binding
         binding = ActivityTipsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // Access the TextView using view binding
-        binding.tipsTextView.text = "@string/tips"
     }
 }

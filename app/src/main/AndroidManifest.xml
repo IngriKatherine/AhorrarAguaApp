@@ -59,19 +59,20 @@ Es estándar para archivos XML y asegura la interpretación correcta de los cara
         >> El elemento <application> define la aplicación y contiene varios atributos que configuran su comportamiento y apariencia:
         android:allowBackup="true"
         >> android:allowBackup="true": Permite que la aplicación realice copias de seguridad y restauraciones.
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.AhorraAguaApp"
-        android:usesCleartextTraffic="false"
-        tools:targetApi="31">
+        android:dataExtractionRules="@xml/data_extraction_rules":  Apunta a las reglas de extracción de datos especificadas en el archivo XML data_extraction_rules.
+        android:fullBackupContent="@xml/backup_rules": Indica las reglas de respaldo de contenido de la aplicación.
+        android:icon="@mipmap/ic_launcher": Especifica el icono de la aplicación.
+        android:label="@string/app_name": Define el nombre de la aplicación que se muestra al usuario.
+        android:roundIcon="@mipmap/ic_launcher_round": Define el icono redondo de la aplicación.
+        android:supportsRtl="true": Habilita la compatibilidad con idiomas que se escriben de derecha a izquierda (RTL).
+        android:theme="@style/Theme.AhorraAguaApp": Define el tema visual predeterminado de la aplicación.
+        android:usesCleartextTraffic="false": Indica que la aplicación no permite tráfico de texto no cifrado.
+        tools:targetApi="31">: Especifica que las herramientas de desarrollo deben considerar que la aplicación está orientada a la API 31 (Android 12).
 
         <activity
-            android:name=".ArticulosActivity"
-            android:exported="false" />
+            >> Cada elemento <activity> define una pantalla o actividad de la aplicación:
+            android:name=".ArticulosActivity": Indica el nombre de la actividad.
+            android:exported="false" />: Define si la actividad es accesible desde otras aplicaciones (true significa que es accesible, false que no lo es).
 
         <activity
             android:name=".TipsActivity"
@@ -88,6 +89,7 @@ Es estándar para archivos XML y asegura la interpretación correcta de los cara
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+                >>Dentro de la MainActivity, el filtro de intent (<intent-filter>) especifica que esta actividad es el punto de entrada de la aplicación:
         </activity>
     </application>
 </manifest>
